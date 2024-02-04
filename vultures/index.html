@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="modal.css">
+  <title>YZYTIMER</title>
+</head>
+
+<body>
+  <div class="radio-group">
+    <input type="radio" id="Number 1" name="color" value="Number 1" checked />
+    <label for="Number 1">VOL I</label>
+
+    <input type="radio" id="Number 2" name="color" value="Number 2" />
+    <label for="Number 2">VOL II</label>
+
+    <input type="radio" id="Number 3" name="color" value="Number 3" />
+    <label for="Number 3">VOL III</label>
+
+    <div class="selection-indicator-wrapper">
+      <span class="selection-indicator"></span>
+    </div>
+  </div>
+
+  <div class="timer">
+    For Vultures
+    <h1><div id="countdown"></div></h1>
+  </div>
+  </div>
+
+    <a href="#demo-modal">Acknowledgements</a>
+
+  <div id="demo-modal" class="modal">
+    <div class="modal__content">
+        <p>
+            Portions of this website have utilized the following copyrighted material, the use of which is hereby acknowledged.
+		</p>
+		<p>
+			<b>Boom123bam - BOUNCY Radio Selector (CSS)</b><br>
+			The MIT License (MIT)
+			<br>
+        </p>
+
+		<p>
+			<b>Marko - CSS-only modal</b><br>
+			The MIT License (MIT)
+			<br>
+		</p> 
+
+    <a href="Acknowledgments.txt" target="_blank">View Licenses</a>
+        <a href="#" class="modal__close">&times;</a>
+    </div>
+</div>
+
+  <script>
+    var eventDate = new Date("2024-02-09T08:00:00Z");
+    var radios = document.getElementsByName('color');
+    for (var i = 0, length = radios.length; i < length; i++) {
+      radios[i].onclick = function() {
+        if (this.value == 'Number 1') {
+          eventDate = new Date("2024-02-09T08:00:00Z");
+          document.body.style.backgroundImage = "url('fCJASTq.png')";
+          document.body.style.backgroundColor = "#d8c8bb";
+          document.body.style.color = "black";
+          document.body.style.mixBlendMode = "normal";
+          document.body.style.textShadow = "";
+          countdown();
+        } else if (this.value == 'Number 2') {
+          eventDate = new Date("2024-03-08T08:00:00Z");
+          document.body.style.backgroundImage = "url('h4WLTJr.png')";
+          document.body.style.backgroundColor = "#2a2a2a";
+          document.body.style.color = "white";
+          document.body.style.mixBlendMode = "normal";
+          document.body.style.textShadow = "";
+          countdown();
+        } else if (this.value == 'Number 3') {
+          eventDate = new Date("2024-04-05T08:00:00Z");
+          document.body.style.backgroundImage = "url('epI6fvV.png')";
+          document.body.style.backgroundColor = "#273744";
+          document.body.style.color = "white";
+          document.body.style.textShadow = "rgb(73 221 255) 0px 0px 10px";
+          countdown();
+        }
+      }
+    }
+
+    function countdown() {
+      var now = new Date();
+      var currentTime = now.getTime();
+      var eventTime = eventDate.getTime();
+      var remainingTime = eventTime - currentTime;
+      var milliseconds = Math.floor(remainingTime % 1000);
+      var seconds = Math.floor(remainingTime / 1000);
+      var minutes = Math.floor(seconds / 60);
+      var hours = Math.floor(minutes / 60);
+      var days = Math.floor(hours / 24);
+      hours %= 24;
+      minutes %= 60;
+      seconds %= 60;
+      hours = (hours < 10) ? "0" + hours : hours;
+      minutes = (minutes < 10) ? "0" + minutes : minutes;
+      seconds = (seconds < 10) ? "0" + seconds : seconds;
+      milliseconds = (milliseconds < 100) ? "0" + milliseconds : milliseconds;
+      milliseconds = (milliseconds < 10) ? "0" + milliseconds : milliseconds;
+      if (remainingTime < 0) {
+        clearInterval(countdown);
+        document.getElementById("countdown").innerHTML = "Hope it's worth the wait!";
+        document.getElementById("vultures-logo").style = 'filter: invert(10%) sepia(88%) saturate(6853%) hue-rotate(11deg) brightness(94%) contrast(118%);';
+      } else {
+        document.getElementById("countdown").innerHTML = days + "d " + hours + ":" + minutes + ":" + seconds + ":" + milliseconds + " ";
+        setTimeout(countdown, 10); //Update every 10ms
+      }
+    }
+    countdown(); // Start the countdown when the page loads
+  </script>
+</body>
+
+</html>
