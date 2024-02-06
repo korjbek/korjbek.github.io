@@ -38,14 +38,14 @@
   </style>
 
   <div class="radio-group">
-    <input type="radio" id="Number 1" name="color" value="Number 1" checked />
-    <label for="Number 1">VOL I</label>
+    <input type="radio" id="Volume 1" name="color" value="Volume 1" checked />
+    <label for="Volume 1">VOL I</label>
 
-    <input type="radio" id="Number 2" name="color" value="Number 2" />
-    <label for="Number 2">VOL II</label>
+    <input type="radio" id="Volume 2" name="color" value="Volume 2" />
+    <label for="Volume 2">VOL II</label>
 
-    <input type="radio" id="Number 3" name="color" value="Number 3" />
-    <label for="Number 3">VOL III</label>
+    <input type="radio" id="Volume 3" name="color" value="Volume 3" />
+    <label for="Volume 3">VOL III</label>
 
     <div class="selection-indicator-wrapper">
       <span class="selection-indicator"></span>
@@ -89,7 +89,7 @@
     var radios = document.getElementsByName('color');
     for (var i = 0, length = radios.length; i < length; i++) {
       radios[i].onclick = function() {
-        if (this.value == 'Number 1') {
+        if (this.value == 'Volume 1') {
           eventDate = new Date("2024-02-09T08:00:00Z");
           document.body.style.backgroundImage = "url('fCJASTq.png')";
           document.body.style.backgroundColor = "#d8c8bb";
@@ -97,7 +97,7 @@
           document.body.style.mixBlendMode = "normal";
           document.body.style.textShadow = "";
           countdown();
-        } else if (this.value == 'Number 2') {
+        } else if (this.value == 'Volume 2') {
           eventDate = new Date("2024-03-08T08:00:00Z");
           document.body.style.backgroundImage = "url('h4WLTJr.png')";
           document.body.style.backgroundColor = "#2a2a2a";
@@ -105,7 +105,7 @@
           document.body.style.mixBlendMode = "normal";
           document.body.style.textShadow = "";
           countdown();
-        } else if (this.value == 'Number 3') {
+        } else if (this.value == 'Volume 3') {
           eventDate = new Date("2024-04-05T08:00:00Z");
           document.body.style.backgroundImage = "url('epI6fvV.png')";
           document.body.style.backgroundColor = "#273744";
