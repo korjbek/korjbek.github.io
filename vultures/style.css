@@ -69,7 +69,7 @@ a {
   height: 100%;
   position: absolute;
   z-index: 1;
-  mix-blend-mode: difference;
+  mix-blend-mode:soft-light;
   transition-duration: var(--transition-duration);
   transition-timing-function: cubic-bezier(
     0.25,
