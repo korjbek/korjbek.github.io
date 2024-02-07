@@ -88,12 +88,13 @@
 </div>
 
   <script>
-    var eventDate = new Date("2024-02-09T08:00:00Z");
+    // From: https://www.yews.news/edition/2-6-24-3pm
+    var eventDate = new Date("Feb 8, 2024 11:00 PM CST");
     var radios = document.getElementsByName('color');
     for (var i = 0, length = radios.length; i < length; i++) {
       radios[i].onclick = function() {
         if (this.value == 'Volume 1') {
-          eventDate = new Date("2024-02-09T08:00:00Z");
+          eventDate = new Date("Feb 8, 2024 11:00 PM CST");
           document.body.style.backgroundImage = "url('fCJASTq.png')";
           document.body.style.backgroundColor = "#d8c8bb";
           document.body.style.color = "black";
