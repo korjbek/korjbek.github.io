@@ -62,7 +62,7 @@
   </div>
 
   <div>
-    <a href="#credits"><img src="qmark.svg" class="qmark"></a>
+    <a href="#credits"><img src="qmark.svg" id="qmark-id" class="qmark"></a>
   </div>
 
   <div id="credits" class="modal">
@@ -146,9 +146,28 @@
       if (remainingTime < 0) {
         clearInterval(countdown);
         document.getElementById("countdown").innerHTML = "Hope it's worth the wait!";
-        document.getElementById("vultures-logo").style = 'filter: invert(10%) sepia(88%) saturate(6853%) hue-rotate(11deg) brightness(94%) contrast(118%);';
+        var qmarkElement = document.getElementById("qmark-id");
+        qmarkElement.style.animation = "qmarkAnimation 3s infinite";
+        var keyframes = `
+          @keyframes qmarkAnimation {
+            0% {
+              filter: invert(1);
+            }
+            50% {
+              filter: invert(14%) sepia(77%) saturate(6186%) hue-rotate(358deg) brightness(104%) contrast(118%);
+            }
+            100% {
+              filter: invert(1);
+            }
+          }
+        `;
+        var styleElement = document.createElement("style");
+        styleElement.type = "text/css";
+        styleElement.appendChild(document.createTextNode(keyframes));
+        document.head.appendChild(styleElement);
       } else {
         document.getElementById("countdown").innerHTML = days + "d " + hours + ":" + minutes + ":" + seconds + ":" + milliseconds + " ";
+        document.getElementById("qmark-id").style = '';
         setTimeout(countdown, 10); //Update every 10ms
       }
     }
