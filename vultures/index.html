@@ -22,7 +22,7 @@
         font-size: 0.5em;
       }
       body{
-        background-image: url('fCJASTq.webp');
+        background-image: url('EtLRK2I.webp');
         background-color: #d8c8bb;
         color: black;
         mix-blend-mode: normal;
@@ -101,7 +101,7 @@
       radios[i].onclick = function() {
         if (this.value == 'Volume 1') {
           eventDate = new Date("Feb 9, 2024 12:00 AM CST");
-          document.body.style.backgroundImage = "url('fCJASTq.webp')";
+          document.body.style.backgroundImage = "url('EtLRK2I.webp')";
           document.body.style.backgroundColor = "#d8c8bb";
           document.body.style.color = "black";
           document.body.style.mixBlendMode = "normal";
@@ -146,7 +146,11 @@
       milliseconds = (milliseconds < 10) ? "0" + milliseconds : milliseconds;
       if (remainingTime < 0) {
         clearInterval(countdown);
-        document.getElementById("countdown").innerHTML = "Hope it's worth the wait!";
+        if (document.getElementById("Volume 1").checked) {
+          document.getElementById("countdown").innerHTML = "It's out now!";
+        } else {
+          document.getElementById("countdown").innerHTML = "Hope it's worth the wait!";
+        }
         var qmarkElement = document.getElementById("qmark-id");
         qmarkElement.style.animation = "qmarkAnimation 3s infinite";
         var keyframes = `
