@@ -99,7 +99,7 @@
 </div>
 
   <script>
-    var eventDate = new Date("2024-03-08T08:00:00Z");
+    var eventDate = new Date("2024-05-03T01:00:00-07:00");
     var radios = document.getElementsByName('color');
     for (var i = 0, length = radios.length; i < length; i++) {
       radios[i].onclick = function() {
@@ -112,7 +112,7 @@
           document.body.style.textShadow = "";
           countdown();
         } else if (this.value == 'Volume 2') {
-          eventDate = new Date("2024-03-08T08:00:00Z");
+          eventDate = new Date("2024-05-03T01:00:00-07:00");
           document.body.style.backgroundImage = "url('432162952_1468691677331908.webp')";
           document.body.style.backgroundColor = "#2a2a2a";
           document.body.style.color = "white";
@@ -120,7 +120,7 @@
           document.body.style.textShadow = "";
           countdown();
         } else if (this.value == 'Volume 3') {
-          eventDate = new Date("2024-04-05T08:00:00Z");
+          eventDate = new Date("2024-01-01T08:00:00Z");
           document.body.style.backgroundImage = "url('epI6fvV.webp')";
           document.body.style.backgroundColor = "#273744";
           document.body.style.color = "white";
@@ -152,8 +152,11 @@
         clearInterval(countdown);
         if (document.getElementById("Volume 1").checked) {
           document.getElementById("countdown").innerHTML = "It's out now!";
+        }
+        else if (document.getElementById("Volume 3").checked) {
+          document.getElementById("countdown").innerHTML = "TBA";
         } else {
-          document.getElementById("countdown").innerHTML = "Stand By...";
+          document.getElementById("countdown").innerHTML = "Waiting for ye...";
         }
         var qmarkElement = document.getElementById("qmark-id");
         qmarkElement.style.animation = "qmarkAnimation 3s infinite";
