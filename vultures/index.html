@@ -9,8 +9,8 @@
   <title>YZYTIMER</title>
   <meta property="og:site_name" content="YZYTIMER">
   <meta name="description" content="Countdown to the release of ¥$'s upcoming albums">
-  <meta property="og:title" content="Tracking Volume 2">
-  <meta property="og:description" content="From yeezy.com: August 2nd">
+  <meta property="og:title" content="Waiting for Volume 3">
+  <meta property="og:description" content="TBA">
   <meta property="og:image" content="https://korjbek.github.io/vultures/GHhT2WNW4AAwg5U.webp">
   <meta property="og:url" content="https://korjbek.github.io/vultures">
   <meta name="theme-color" content="#a06740">
@@ -23,7 +23,7 @@
         font-size: 0.5em;
       }
       body{
-        background-image: url('432162952_1468691677331908.webp');
+        background-image: url('vol2-cover.jpg');
         background-color: #2a2a2a;
         color: white;
         mix-blend-mode: normal;
@@ -79,20 +79,15 @@
         <a href="https://open.spotify.com/album/30zwjSQEodaUXCn11nmiVF">Spotify</a> |
         <a href="https://listen.tidal.com/album/345695654">Tidal</a>
       </p>
+      <p>VOLUME TWO<br>
+        <a href="https://music.apple.com/us/album/vultures-2/1760905142">Apple Music</a> | 
+        <a href="https://open.spotify.com/album/2LaSVrn1EJc9ouFyp69g4e">Spotify</a> |
+        <a href="https://listen.tidal.com/album/379129713">Tidal</a>
+      </p>
+      <p>
       <p>
             Portions of this website have utilized the following copyrighted material, the use of which is hereby acknowledged.
 		</p>
-		<p>
-			<b>Boom123bam - BOUNCY Radio Selector (CSS)</b><br>
-			The MIT License (MIT)
-			<br>
-        </p>
-
-		<p>
-			<b>Marko - CSS-only modal</b><br>
-			The MIT License (MIT)
-			<br>
-		</p> 
 
     <a href="Acknowledgments.txt" target="_blank">View Licenses</a>
         <a href="#" class="modal__close">&times;</a>
@@ -115,7 +110,7 @@
         } else if (this.value == 'Volume 2') {
           // eventDate: https://web.archive.org/web/20240731150752/yeezy.com
           eventDate = new Date("2024-08-02T00:00");
-          document.body.style.backgroundImage = "url('432162952_1468691677331908.webp')";
+          document.body.style.backgroundImage = "url('vol2-cover.jpg')";
           document.body.style.backgroundColor = "#2a2a2a";
           document.body.style.color = "white";
           document.body.style.mixBlendMode = "normal";
@@ -153,6 +148,9 @@
       if (remainingTime < 0) {
         clearInterval(countdown);
         if (document.getElementById("Volume 1").checked) {
+          document.getElementById("countdown").innerHTML = "It's out now!";
+        }
+        else if (document.getElementById("Volume 2").checked) {
           document.getElementById("countdown").innerHTML = "It's out now!";
         }
         else if (document.getElementById("Volume 3").checked) {
